@@ -1,6 +1,6 @@
 import botGastosImg from "../assets/bot-gastos.png";
 import DashboardVentasImg from "../assets/DashboardVentas.png";
-import portfolioImg from "../assets/PORTFOLIO.png"
+import PortfolioImg from "../assets/PORTFOLIO.png"
 
 export const PROJECT_DETAILS = {
   "Dashboard Analytics": [
