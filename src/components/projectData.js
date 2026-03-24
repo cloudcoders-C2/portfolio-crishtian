@@ -73,7 +73,7 @@ export const PROJECT_DETAILS = {
       detail: "Portfolio personal con modo oscuro/claro, animaciones de scroll, orbe 3D interactivo con logos orbitando, sección de precios dinámica y formulario de contacto.",
       tech: ["React JS", "Vite", "CSS Modules", "Context API"],
       accent: "#A8EB12",
-      link: "#",
+      link: "https://portfolio-crishtian-zzpt.vercel.app/",
       status: "live",
       year: "2026",
       image: PortfolioImg,

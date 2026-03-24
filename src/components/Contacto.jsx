@@ -82,7 +82,7 @@ export default function Contacto({ dark, T }) {
     // Bloquear números y caracteres especiales en nombre
     if (name === "nombre" && value !== "" && !/^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s]*$/.test(value)) return;
     // Bloquear letras en teléfono — solo números, +, espacios y guiones
-    if (name === "telefono" && value !== "" && !/^[0-9+\s\-]*$/.test(value)) return;
+    if (name === "telefono" && value !== "" && !/^[0-9+\s-]*$/.test(value)) return;
     setForm(prev => ({ ...prev, [name]: value }));
     // Validación en tiempo real solo si ya hubo un intento de envío o el campo fue tocado
     const err = validateField(name, value);
