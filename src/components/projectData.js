@@ -81,7 +81,7 @@ export const PROJECT_DETAILS = {
     },
     {
       title: "Dashboard Admin SaaS",
-      detail: "Aplicación de Restaurante con autenticación, gestión de usuarios, roles y permisos. Arquitectura modular con hooks personalizados, lazy loading y optimización de rendimiento.",
+      detail: "Aplicación de Restaurante modo claro/oscuro con autenticación, gestión de usuarios, roles y permisos. Arquitectura modular con hooks personalizados, lazy loading y optimización de rendimiento.",
       tech: ["React JS", "Vite","React Router DOM", "Tailwind CSS", "REST API", "JWT", "Node.js", "PostgreSQL", "WebSockets", "Claude IA + N8N"],
       accent: "#38BDF8",
       link: null,
