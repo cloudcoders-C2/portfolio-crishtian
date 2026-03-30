@@ -88,6 +88,7 @@ export const PROJECT_DETAILS = {
       status: "dev",
       year: "2026",
       image: SistemaRestaurante,
+      showAdquirir: true,
     },
     {
       title: "Landing Page con IA",
