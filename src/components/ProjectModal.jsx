@@ -143,7 +143,7 @@ function PreciosModal({ dark, onClose, accent }) {
                 </div>
               ))}
               <a
-                href="https://wa.me/51999999999?text=Hola%2C%20me%20interesa%20el%20sistema%20de%20restaurante"
+                href="https://wa.me/51960959529?text=Hola%2C%20me%20interesa%20el%20sistema%20de%20restaurante"
                 target="_blank" rel="noopener noreferrer"
                 style={{ display:"block",marginTop:16,textAlign:"center",padding:"10px 0",borderRadius:10,fontSize:13,fontWeight:700,fontFamily:"'Syne',sans-serif",textDecoration:"none",cursor:"pointer",background:plan.featured?"linear-gradient(135deg,#8F00FF,#AE35FF)":"transparent",color:plan.featured?"#fff":accent,border:plan.featured?"none":`1.5px solid ${accent}`,transition:"opacity .2s" }}
                 onMouseEnter={e=>e.currentTarget.style.opacity="0.82"}
