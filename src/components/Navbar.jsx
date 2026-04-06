@@ -146,7 +146,7 @@ export default function Navbar({ dark, toggleTheme, T }) {
 
           {/* Botón descargar CV */}
           <a
-            href="/crishtian_cv.pdf"
+            href="/crishtian-cv.pdf"
             download="CV-Crishtian-Rodriguez.pdf"
             className={`${styles.cvBtn} ${downloaded ? styles.cvBtnDone : ""}`}
             title="Descargar CV"
