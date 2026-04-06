@@ -92,14 +92,15 @@ export const PROJECT_DETAILS = {
       showAdquirir: true,
     },
     {
-      title: "Sistema de Gestión Educativa",
-      detail: "Plataforma educativa con modo oscuro, gestión de asistencia mediante WebSockets y control de acceso basado en roles. Arquitectura escalable con autenticación segura y base de datos relacional para control académico.",
-      tech: ["React JS", "Node.js", "Express", "Supabase", "PostgreSQL", "Tailwind CSS", "WebSockets"],
+      title: "Sistema de Gestión Educativa Pro",
+      detail: "Plataforma educativa integral con modo oscuro y App Móvil para padres (Flutter/React Native). Gestión de asistencia por WebSockets, notificaciones, pagos de pensiones, recibos digitales y visualización de notas en tiempo real con control de acceso por roles.",
+      tech: ["React JS", "Node.js", "Express", "Supabase", "Flutter", "React Native", "Tailwind CSS", "WebSockets"],
       accent: "#FF9A00",
       link: null,
       status: "dev",
       year: "2026",
       image: sisEducacionImg,
+      showAdquirir: true,
     },
   ],
 };
