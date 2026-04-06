@@ -2,6 +2,7 @@ import botGastosImg from "../assets/bot-gastos.png";
 import DashboardVentasImg from "../assets/DashboardVentas.png";
 import PortfolioImg from "../assets/PORTFOLIO.png";
 import SistemaRestaurante from "../assets/sistemarestaurante.png";
+import sisEducacionImg from "../assets/sisEducacion.png";
 
 export const PROJECT_DETAILS = {
   "Dashboard Analytics": [
@@ -91,14 +92,14 @@ export const PROJECT_DETAILS = {
       showAdquirir: true,
     },
     {
-      title: "Landing Page con IA",
-      detail: "Landing de alta conversión con chatbot de Claude AI integrado, animaciones con Framer Motion, formulario inteligente y analítica de comportamiento en tiempo real.",
-      tech: ["React JS", "Claude AI", "Framer Motion", "Vite"],
+      title: "Sistema de Gestión Educativa",
+      detail: "Plataforma educativa con modo oscuro, gestión de asistencia mediante WebSockets y control de acceso basado en roles. Arquitectura escalable con autenticación segura y base de datos relacional para control académico.",
+      tech: ["React JS", "Node.js", "Express", "Supabase", "PostgreSQL", "Tailwind CSS", "WebSockets"],
       accent: "#FF9A00",
       link: null,
       status: "dev",
-      year: "2025",
-      image: null,
+      year: "2026",
+      image: sisEducacionImg,
     },
   ],
 };
