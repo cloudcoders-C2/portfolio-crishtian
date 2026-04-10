@@ -3,6 +3,7 @@ import DashboardVentasImg from "../assets/DashboardVentas.png";
 import PortfolioImg from "../assets/PORTFOLIO.png";
 import SistemaRestaurante from "../assets/sistemarestaurante.png";
 import sisEducacionImg from "../assets/sisEducacion.png";
+import AppRepartidorImg from "../assets/AppRepartidor.jpg";
 
 export const PROJECT_DETAILS = {
   "Dashboard Analytics": [
@@ -89,6 +90,17 @@ export const PROJECT_DETAILS = {
       status: "dev",
       year: "2026",
       image: SistemaRestaurante,
+      showAdquirir: true,
+    },
+    {
+      title: "App Móvil para Repartidor",
+      detail: "Aplicación móvil híbrida para gestión de repartos en tiempo real. Incluye modo claro y oscuro, seguimiento de pedidos, historial de entregas y autenticación con roles. Construida con React Native y Expo Go, con backend en Supabase y PostgreSQL.",
+      tech: ["React Native", "Expo Go", "Supabase", "PostgreSQL", "Context API"],
+      accent: "#00C6FF",
+      link: null,
+      status: "dev",
+      year: "2026",
+      image: AppRepartidorImg,
       showAdquirir: true,
     },
     {

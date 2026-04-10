@@ -212,7 +212,6 @@ export default function ProjectModal({ category, accent, onClose, dark, T }) {
   const [preciosProject, setPreciosProject] = useState(null);
 
   useEffect(() => {
-    document.body.style.overflow = "hidden";
     return () => { document.body.style.overflow = ""; };
   }, []);
 

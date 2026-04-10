@@ -6,15 +6,15 @@
   z-index: 150;
 
   /* Tamaño y forma */
-  width: 48px;
-  height: 48px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
   border: none;
   cursor: pointer;
 
-  /* Gradiente violeta del portfolio */
-  background: linear-gradient(135deg, #8F00FF, #AE35FF);
-  box-shadow: 0 4px 20px #8F00FF55, 0 0 0 0 #8F00FF44;
+  /* Sin fondo — el logo ya tiene su propio diseño */
+  background: transparent;
+  box-shadow: none;
 
   /* Centrar icono */
   display: flex;
@@ -23,15 +23,13 @@
 
   /* Transición suave para hover y aparición */
   transition: transform .3s cubic-bezier(.34, 1.56, .64, 1),
-              box-shadow .3s ease,
               opacity .4s ease,
               visibility .4s ease;
 }
 
 /* ── Hover ───────────────────────────────────────────────── */
 .btn:hover {
-  transform: translateY(-4px) scale(1.1);
-  box-shadow: 0 8px 28px #8F00FF77, 0 0 0 6px #8F00FF22;
+  transform: translateY(-4px) scale(1.15);
 }
 
 .btn:active {
@@ -43,7 +41,6 @@
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
-  /* Animación de entrada */
   animation: slideIn .4s cubic-bezier(.34, 1.56, .64, 1) both;
 }
 
@@ -68,8 +65,8 @@
 
 /* ── Pulse suave en reposo ────────────────────────────────── */
 @keyframes pulse {
-  0%, 100% { box-shadow: 0 4px 20px #8F00FF55, 0 0 0 0 #8F00FF33; }
-  50%       { box-shadow: 0 4px 20px #8F00FF55, 0 0 0 8px #8F00FF00; }
+  0%, 100% { filter: drop-shadow(0 0 4px #8F00FF55); }
+  50%       { filter: drop-shadow(0 0 10px #8F00FF99); }
 }
 .visible {
   animation: slideIn .4s cubic-bezier(.34, 1.56, .64, 1) both,
