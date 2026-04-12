@@ -76,6 +76,8 @@ body { overflow-x: hidden; }
   height: 100%;
   display: flex;
   flex-direction: column;
+  border-radius: 20px;
+  overflow: hidden;
 }
 .card-hover-wrap:hover {
   transform: translateY(-5px);
@@ -361,4 +363,12 @@ body { overflow-x: hidden; }
   cursor: pointer;
   transition: background .25s, color .25s;
   border: none; outline: none;
+}
+
+/* ── Light mode: orbe hero más visible ───────────────────── */
+html:not(.dark) .orbe-ring-1,
+html:not(.dark) .orbe-ring-2,
+html:not(.dark) .orbe-ring-3 {
+  opacity: 0.8;
+  filter: drop-shadow(0 0 8px #8F00FF44);
 }

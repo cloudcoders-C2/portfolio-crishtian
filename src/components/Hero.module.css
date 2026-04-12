@@ -1,8 +1,8 @@
 .section {
-  min-height: 85vh;
+  min-height: 75vh;
   display: flex;
   align-items: center;
-  padding: 90px 0 40px;
+  padding: 90px 0 20px;
 }
 
 .inner {
@@ -65,10 +65,21 @@
 
 .orbeGlow {
   position: absolute;
-  inset: 0;
+  inset: -10%;
   border-radius: 50%;
-  background: radial-gradient(circle, #8F00FF22 0%, #AE35FF11 40%, transparent 70%);
-  filter: blur(30px);
+  background: radial-gradient(circle, #8F00FF38 0%, #AE35FF1a 40%, transparent 70%);
+  filter: blur(48px);
+  animation: glowPulseOrbe 4s ease-in-out infinite;
+}
+
+:global(html:not(.dark)) .orbeGlow {
+  background: radial-gradient(circle, #8F00FF55 0%, #AE35FF30 40%, transparent 70%);
+  filter: blur(40px);
+}
+
+@keyframes glowPulseOrbe {
+  0%, 100% { opacity: 0.7; transform: scale(1);   }
+  50%       { opacity: 1;   transform: scale(1.06); }
 }
 
 .orbeRing {
@@ -81,11 +92,20 @@
   height: 28%;
   border-radius: 50%;
   background: linear-gradient(135deg, #8F00FF, #AE35FF, #C46CFF);
-  box-shadow: 0 0 60px #8F00FF66, 0 0 120px #AE35FF33;
+  box-shadow:
+    0 0 40px #8F00FFaa,
+    0 0 80px #AE35FF55,
+    0 0 160px #8F00FF22;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 2;
+  animation: coreBreath 3s ease-in-out infinite;
+}
+
+@keyframes coreBreath {
+  0%, 100% { box-shadow: 0 0 40px #8F00FFaa, 0 0 80px #AE35FF55, 0 0 160px #8F00FF22; }
+  50%       { box-shadow: 0 0 60px #8F00FFcc, 0 0 120px #AE35FF77, 0 0 200px #8F00FF33; }
 }
 
 .orbeCoreText {
@@ -100,21 +120,30 @@
 
 .logoChip {
   position: absolute;
-  width: 38px;
-  height: 38px;
-  border-radius: 10px;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 0.3s cubic-bezier(.34,1.56,.64,1), box-shadow 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.logoChip:hover {
+  transform: translate(-50%, -50%) scale(1.25) !important;
 }
 
 /* ── Stats ────────────────────────────────────────────────── */
 .statNumber {
-  font-size: clamp(28px, 5vw, 38px);
+  font-size: clamp(28px, 5vw, 42px);
   font-weight: 800;
+  line-height: 1;
 }
 
 .statLabel {
   font-size: 13px;
-  margin-top: 4px;
+  margin-top: 6px;
+  font-family: 'Space Mono', monospace;
+  letter-spacing: 0.5px;
 }

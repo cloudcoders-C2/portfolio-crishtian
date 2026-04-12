@@ -64,8 +64,12 @@
   position: absolute;
   inset: 2px;
   border-radius: 23px;
-  background: #07070f;
+  background: #07071a;
   z-index: 0;
+}
+
+:global(html:not(.dark)) .photoInner::before {
+  background: #f7f4ff;
 }
 
 /* Glow exterior */

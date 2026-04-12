@@ -73,14 +73,14 @@ function OrbeHero({ dark }) {
   return (
     <div className={styles.orbeWrapper}>
       <div className={styles.orbeGlow} />
-      <div className={`orbe-ring-3 ${styles.orbeRing}`} style={{ width: "100%", height: "100%", border: `1px dashed ${dark ? "#8F00FF22" : "#8F00FF15"}` }} />
-      <div className={`orbe-ring-3 ${styles.orbeRing}`} style={{ width: "94%", height: "94%", border: `1px solid ${dark ? "#8F00FF2a" : "#8F00FF18"}`, animation: "orbeRotate 22s linear infinite" }}>
+      <div className={`orbe-ring-3 ${styles.orbeRing}`} style={{ width: "100%", height: "100%", border: `1px dashed ${dark ? "#8F00FF22" : "#8F00FF44"}` }} />
+      <div className={`orbe-ring-3 ${styles.orbeRing}`} style={{ width: "94%", height: "94%", border: `1px solid ${dark ? "#8F00FF2a" : "#8F00FF50"}`, animation: "orbeRotate 22s linear infinite" }}>
         {RING3_LOGOS.map((logo) => <LogoChip key={logo.name} logo={logo} className="logo-chip" dark={dark} />)}
       </div>
-      <div className={`orbe-ring-2 ${styles.orbeRing}`} style={{ width: "74%", height: "74%", border: `1px solid ${dark ? "#AE35FF28" : "#AE35FF18"}` }}>
+      <div className={`orbe-ring-2 ${styles.orbeRing}`} style={{ width: "74%", height: "74%", border: `1px solid ${dark ? "#AE35FF28" : "#AE35FF55"}` }}>
         {RING2_LOGOS.map((logo) => <LogoChip key={logo.name} logo={logo} className="logo-chip-2" dark={dark} />)}
       </div>
-      <div className={`orbe-ring-1 ${styles.orbeRing}`} style={{ width: "62%", height: "62%", border: `1.5px solid ${dark ? "#8F00FF44" : "#8F00FF28"}` }}>
+      <div className={`orbe-ring-1 ${styles.orbeRing}`} style={{ width: "62%", height: "62%", border: `1.5px solid ${dark ? "#8F00FF44" : "#8F00FF66"}` }}>
         {RING1_LOGOS.map((logo) => <LogoChip key={logo.name} logo={logo} className="logo-chip" dark={dark} />)}
       </div>
       <div className={`orbe-core ${styles.orbeCore}`}>
