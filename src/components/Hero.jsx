@@ -5,6 +5,7 @@ import { useInView } from "../hooks/useInView";
 import { SOCIAL_LINKS, STACK_ITEMS } from "../constants";
 import { scrollToSection } from "../utils/scrollTo";
 import styles from "./Hero.module.css";
+import logoHero from "../assets/KODEX.png";
 
 // ── SVG icons nuevos logos ─────────────────────────────────────
 const FigmaIcon = () => (
@@ -84,7 +85,7 @@ function OrbeHero({ dark }) {
         {RING1_LOGOS.map((logo) => <LogoChip key={logo.name} logo={logo} className="logo-chip" dark={dark} />)}
       </div>
       <div className={`orbe-core ${styles.orbeCore}`}>
-        <img src="/src/assets/KODEX.png" alt="KODEX" className={styles.orbeCoreLogo} />
+        <img src={logoHero} alt="KODEX" className={styles.orbeCoreLogo} />
       </div>
     </div>
   );
