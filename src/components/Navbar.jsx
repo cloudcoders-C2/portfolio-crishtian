@@ -116,10 +116,10 @@ export default function Navbar({ dark, toggleTheme, T }) {
               <div key={l} className={styles.navLinkWrap}>
                 <span
                   className={styles.navLink}
-                  style={{ color: isActive ? "#7C3AED" : T.textMid }}
+                  style={{ color: isActive ? "#FF3E81" : T.textMid }}
                   onClick={() => scrollToSection(l)}
-                  onMouseEnter={(e) => (e.currentTarget.style.color = "#7C3AED")}
-                  onMouseLeave={(e) => (e.currentTarget.style.color = isActive ? "#7C3AED" : T.textMid)}
+                  onMouseEnter={(e) => (e.currentTarget.style.color = "#FF3E81")}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = isActive ? "#FF3E81" : T.textMid)}
                 >
                   {l}
                 </span>
@@ -164,9 +164,9 @@ export default function Navbar({ dark, toggleTheme, T }) {
             className={`hnav ${menuOpen ? "open" : ""}`}
             onClick={(e) => { e.stopPropagation(); setMenuOpen((v) => !v); }}
           >
-            <span style={{ background: menuOpen ? "#7C3AED" : T.text }} />
-            <span style={{ background: menuOpen ? "#9333EA" : T.text }} />
-            <span style={{ background: menuOpen ? "#A855F7" : T.text }} />
+            <span style={{ background: menuOpen ? "#FF3E81" : T.text }} />
+            <span style={{ background: menuOpen ? "#FF3E81" : T.text }} />
+            <span style={{ background: menuOpen ? "#FF3E81" : T.text }} />
           </div>
         </div>
       </div>
@@ -191,8 +191,8 @@ export default function Navbar({ dark, toggleTheme, T }) {
                 transition={{ delay: i * 0.05 }}
                 className="mitem"
                 style={{
-                  color: active === l ? "#7C3AED" : T.text,
-                  borderLeft: active === l ? "3px solid #7C3AED" : "3px solid transparent",
+                  color: active === l ? "#FF3E81" : T.text,
+                  borderLeft: active === l ? "3px solid #FF3E81" : "3px solid transparent",
                   paddingLeft: 12,
                 }}
                 onClick={() => {

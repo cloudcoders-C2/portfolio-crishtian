@@ -1,6 +1,6 @@
 .btn {
   position: fixed;
-  bottom: 96px; /* encima del ScrollToTop que está en 32px + 48px + 16px */
+  bottom: 96px;
   right: 28px;
   z-index: 150;
   width: 48px;
@@ -13,51 +13,46 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform .3s cubic-bezier(.34,1.56,.64,1),
-              box-shadow .3s ease,
-              opacity .4s ease,
-              visibility .4s ease;
-  position: fixed;
+  /* Una sola transition que controla TODO — sin animations que peleen */
+  transition:
+    transform .3s cubic-bezier(.34, 1.56, .64, 1),
+    box-shadow .3s ease,
+    opacity .4s ease,
+    visibility .4s ease;
 }
 
 .btn:hover {
   transform: translateY(-4px) scale(1.1);
-  box-shadow: 0 8px 28px rgba(37,211,102,.65);
+  box-shadow: 0 8px 28px rgba(37, 211, 102, .65);
 }
 
 .btn:active {
   transform: scale(0.95);
 }
 
-/* Visible */
+/* Visible — solo opacity/visibility, SIN animation */
 .visible {
   opacity: 1;
   visibility: visible;
-  animation: slideIn .4s cubic-bezier(.34,1.56,.64,1) both;
 }
 
 /* Oculto */
 .hidden {
   opacity: 0;
   visibility: hidden;
-  transform: translateY(20px);
+  transform: translateY(20px) scale(.85);
+  pointer-events: none;
 }
 
-@keyframes slideIn {
-  from { opacity: 0; transform: translateY(20px) scale(.8); }
-  to   { opacity: 1; transform: translateY(0) scale(1); }
-}
-
-/* Pulso de atención */
+/* Pulso de atención — más suave, no hace scale agresivo */
 .pulse {
-  animation: attentionPulse .6s ease-in-out;
+  animation: attentionPulse 1s ease-in-out;
 }
 
 @keyframes attentionPulse {
-  0%   { transform: scale(1); }
-  30%  { transform: scale(1.18); box-shadow: 0 0 0 8px rgba(37,211,102,.2); }
-  60%  { transform: scale(0.95); }
-  100% { transform: scale(1); }
+  0%   { box-shadow: 0 4px 20px rgba(37, 211, 102, .45); }
+  40%  { box-shadow: 0 0 0 10px rgba(37, 211, 102, .18), 0 4px 20px rgba(37, 211, 102, .45); }
+  100% { box-shadow: 0 4px 20px rgba(37, 211, 102, .45); }
 }
 
 /* Badge */

@@ -31,28 +31,6 @@
 }
 
 /* ── Logo ─────────────────────────────────────────────────── */
-.logo {
-  font-family: 'Space Mono', monospace;
-  font-weight: 700;
-  font-size: 17px;
-  letter-spacing: -0.5px;
-  cursor: pointer;
-  flex-shrink: 0;
-}
-
-.logoCloud {
-  background: linear-gradient(135deg, #7C3AED, #9333EA);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.logoCoders {
-  background: linear-gradient(135deg, #A8EB12, #4ffbdf);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
 
 /* ── Nav link wrapper ─────────────────────────────────────── */
 /*
@@ -88,8 +66,8 @@
   height: 2px;
   width: 100%;
   border-radius: 999px;
-  background: linear-gradient(90deg, #7C3AED, #9333EA);
-  box-shadow: 0 0 8px #7C3AED88;
+  background: linear-gradient(90deg, #FF3E81  , #FF3E81);
+  box-shadow: 0 0 8px #FF3E8188;
   /* Animación de entrada/salida con scaleX */
   transform-origin: center;
   transition: transform .35s cubic-bezier(.4, 0, .2, 1),
@@ -101,10 +79,10 @@
   display: block;
   cursor: pointer;
   flex-shrink: 0;
-  height: 32px;
+  height: 35px;
 }
 @media (min-width: 640px) {
-  .logoImg { height: 38px; }
+  .logoImg { height: 40px; }
 }
 
 /* ── Botón CV ─────────────────────────────────────────────── */
@@ -114,9 +92,9 @@
   gap: 5px;
   padding: 7px 10px;
   border-radius: 8px;
-  border: 1.5px solid #7C3AED44;
+  border: 1.5px solid #FF3E8144;
   background: transparent;
-  color: #7C3AED;
+  color: var(--clr-pink);
   font-size: 12px;
   font-weight: 700;
   font-family: 'Space Mono', monospace;
@@ -127,11 +105,11 @@
 }
 
 .cvBtn:hover {
-  background: linear-gradient(135deg, #7C3AED, #9333EA);
+  background: linear-gradient(135deg, #FF3E81, #FF3E81);
   border-color: transparent;
   color: #fff;
   transform: translateY(-2px);
-  box-shadow: 0 4px 16px #7C3AED44;
+  box-shadow: 0 4px 16px #FF3E8144;
 }
 
 .cvLabel {
@@ -140,9 +118,9 @@
 
 /* ── Estado descargado ────────────────────────────────────── */
 .cvBtnDone {
-  border-color: #A8EB1266 !important;
-  background: #A8EB1218 !important;
-  color: #A8EB12 !important;
+  border-color: #01D4E866 !important;
+  background: #01D4E818 !important;
+  color: #01D4E8 !important;
 }
 
 .cvIcon {
