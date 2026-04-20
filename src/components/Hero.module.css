@@ -25,7 +25,7 @@
   align-items: center;
   gap: 2px;
   margin-bottom: 20px;
-  min-height: 36px; /* Evita que el layout salte al cambiar el texto */
+  min-height: 36px;
 }
 
 .typingText {
@@ -36,7 +36,6 @@
   letter-spacing: -0.5px;
 }
 
-/* Cursor parpadeante */
 .typingCursor {
   font-family: 'Space Mono', monospace;
   font-size: clamp(16px, 2.2vw, 22px);
@@ -61,6 +60,8 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto;
+  /* permite que los chips no se corten en los bordes */
+  overflow: visible;
 }
 
 .orbeGlow {
@@ -133,7 +134,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* transform base siempre en CSS — sin inline style, sin conflicto */
   transform: translate(-50%, -50%) scale(1);
   transition: transform 0.3s cubic-bezier(.34,1.56,.64,1), box-shadow 0.3s ease;
   backdrop-filter: blur(8px);
@@ -159,4 +159,22 @@
   margin-top: 6px;
   font-family: 'Space Mono', monospace;
   letter-spacing: 0.5px;
+}
+
+/* ── Responsive landscape (móvil girado) ──────────────────── */
+@media (max-height: 520px) and (orientation: landscape) {
+  .section {
+    min-height: auto;
+    padding: 70px 0 24px;
+    align-items: flex-start;
+  }
+
+  .orbeWrapper {
+    max-width: 260px;
+  }
+
+  .logoChip {
+    width: 34px;
+    height: 34px;
+  }
 }

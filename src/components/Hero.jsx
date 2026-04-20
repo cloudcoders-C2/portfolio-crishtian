@@ -31,6 +31,12 @@ const GitHubIcon = ({ color = "#fff" }) => (
   </svg>
 );
 
+const PostgreSQLIcon = () => (
+  <svg viewBox="0 0 512 512" width="30" height="30" fill="#336791">
+    <path d="M219.8 171.3c3.9 .5 13.1 2.7 12.3 8.5-.8 5.9-9.2 9.1-14.2 8.4-4.7-.7-13.2-6.1-12.3-12.1l.3-2.1c4.2 0 8.3-3.5 13.9-2.7zm168.1-3.4c10.8 2.6-1.1 13.5-6.8 14.3-4.3 .6-12.1-2.2-12.8-7.4-1-7.4 15.7-7.9 19.7-6.9zM365.9 27.1c35.7-.3 81.3 9.4 114.3 51.7 7.2 9.2 10 24 9.7 40.9-.8 49.6-26 129.4-70.7 197.4 4.5 2.9 17.6 7.4 51.1 .5 5.6-1.2 12.7-2.2 17.6 1.6 18.2 13.9-19.6 35.1-28.4 39.2-13.2 6.2-34.8 9.5-51.2 8.7-2.1-.2-4.3-.2-6.3-.6-5.1-1.1-7.4-1-8.3-.7-1.1 .3-1.4 2.9-1.6 3.8-2.8 24.9-7.7 64.7-10.7 82-2.8 16.3-7.7 29.3-17.2 39.2-9.5 9.9-22.8 15.7-40.6 19.5-22.3 4.8-37.9-.1-48.7-9.1-10.3-8.7-15.2-20.4-18-27.4-1.8-4.5-3-11.5-4-19.8-2.3-19.8-3.3-50.4-3-83.3-24.6 22.1-55 17.2-68.2 13.9-10.5-2.6-33-16.1-17.5-28.7 11.9-9.7 30.3-5.5 42.2-15 2.4-1.9 11.4-10.6 11.4-13.5-10-.3-19.6-2.9-28.1-7.5-13.5 14.5-26.4 29.5-39.3 44.6-8.3 9.9-17.4 15.8-27.4 16.2-9.9 .4-18.7-4.6-26.1-11.8-7.3-7.1-14.1-17.2-20.4-29-19-35.5-33.2-86.1-42.3-126.4-6-26.7-9.6-49.1-10.1-59-2.2-44.3 8-74.1 26-93.2 17.9-19 42.4-26 66.1-27.4 35.6-2 71 8.5 86.6 13.8l5 1.8c15.9-10.8 36.1-17.4 61.7-17 13.2 .2 25.5 2.2 36.7 4.2 18.6-7.1 39.8-9.5 59.4-9.7z"/>
+  </svg>
+);
+
 // ── Distribución 3 anillos × 3 logos ──────────────────────────
 const RING1_LOGOS = [
   { name: "React JS",    color: "#61DAFB", angle: 0   },
@@ -41,6 +47,7 @@ const RING2_LOGOS = [
   { name: "n8n",          color: "#EA4B71", angle: 60  },
   { name: "JavaScript",   color: "#F7DF1E", angle: 180 },
   { name: "Tailwind CSS", color: "#38BDF8", angle: 300 },
+  { name: "PostgreSQL",   color: "#336791", angle: 0   },
 ];
 const RING3_LOGOS = [
   { name: "Figma",       color: "#A259FF", angle: 30  },
@@ -57,6 +64,7 @@ function ChipIcon({ name, dark }) {
   if (name === "Figma")       return <FigmaIcon />;
   if (name === "Illustrator") return <IllustratorIcon />;
   if (name === "GitHub")      return <GitHubIcon color={dark ? "#ffffff" : "#1a1a2e"} />;
+  if (name === "PostgreSQL")  return <PostgreSQLIcon />;
   return STACK_ITEMS.find((s) => s.name === name)?.icon() ?? null;
 }
 
@@ -133,7 +141,6 @@ function useTyping({
     return () => clearTimeout(timeout);
   }, [displayed, isDeleting, roleIndex, typeSpeed, deleteSpeed, pauseAfterType, pauseAfterDelete]);
 
-  // Devuelve el texto Y el color del rol actual
   return { displayed, color: ROLES[roleIndex].color };
 }
 
