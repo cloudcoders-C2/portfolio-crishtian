@@ -4,6 +4,7 @@ import { scrollToSection } from "../utils/scrollTo";
 import { CheckIcon } from "./Icons";
 import Reveal from "./Reveal";
 import styles from "./Precios.module.css";
+import {FaBolt} from "react-icons/fa";
 
 export default function Precios({ dark, T }) {
   const [selectedPlan, setSelectedPlan] = useState("basic");
@@ -51,7 +52,7 @@ export default function Precios({ dark, T }) {
             <div className="card-hover-wrap" style={{ flex: 1 }}>
               <div className={styles.card} style={{ background: T.bgCard, border: `1px solid ${activePlan.color}28` }}>
                 <div className={styles.cardTop} style={{ background: `linear-gradient(90deg,${activePlan.color},${activePlan.color}66,transparent)`, transition: "background .4s" }} />
-                <div className={styles.icon}>⚡</div>
+                <div className={styles.icon}> <FaBolt /></div>
                 <div className={styles.label} style={{ color: activePlan.color, transition: "color .3s" }}>Automatización n8n</div>
                 <div className="plan-tabs" style={{ background: dark ? "#0a0a18" : "#ede5ff" }}>
                   {AUTO_PLANS.map((p) => (

@@ -3,6 +3,8 @@ import emailjs from "@emailjs/browser";
 import { SOCIAL_LINKS } from "../constants";
 import Reveal from "./Reveal";
 import styles from "./Contacto.module.css";
+import { FaGithub, FaLinkedin, FaBolt } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
 // ══ Reemplaza estos valores con los de tu cuenta EmailJS ══════
 const EMAILJS_SERVICE_ID  = "service_7zr380q";
@@ -38,9 +40,9 @@ export default function Contacto({ dark, T }) {
   };
 
   const contactItems = [
-    { label: "Email",    icon: "📧", display: copied ? "✓ Copiado!" : "cloudcoders.c2@gmail.com", action: handleCopy },
-    { label: "LinkedIn", icon: "💼", display: "crishtian rodriguez herrera" },
-    { label: "GitHub",   icon: "🐙", display: "@cloudcoders-C2" },
+    { label: "Email",    icon: <MdEmail />, display: copied ? "✓ Copiado!" : "cloudcoders.c2@gmail.com", action: handleCopy },
+    { label: "LinkedIn", icon: <FaLinkedin />, display: "crishtian rodriguez herrera" },
+    { label: "GitHub",   icon: <FaGithub />, display: "@cloudcoders-C2" },
   ];
 
   // Valida un campo individual
@@ -170,7 +172,7 @@ export default function Contacto({ dark, T }) {
               Envíame un mensaje
             </h3>
             <p className={styles.formSub} style={{ color: T.textSub }}>
-              Respondo en menos de 24 horas ⚡
+              Respondo en menos de 24 horas <span className={styles.icon}>{<FaBolt />}</span>
             </p>
 
             <form ref={formRef} onSubmit={handleSubmit} className={styles.form} noValidate>

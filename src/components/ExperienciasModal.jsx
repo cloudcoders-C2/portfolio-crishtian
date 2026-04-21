@@ -1,6 +1,10 @@
 import { useEffect } from "react";
 import { createPortal } from "react-dom";
 import styles from "./ExperienciasModal.module.css";
+import {FaReact} from "react-icons/fa";
+import { FaChartColumn } from "react-icons/fa6";
+import { RiComputerFill } from "react-icons/ri";
+import { MdOutlineHomeWork } from "react-icons/md";
 
 // ══ REEMPLAZA ESTOS DATOS CON TUS EXPERIENCIAS REALES ══════════
 const EXPERIENCES = [
@@ -12,7 +16,7 @@ const EXPERIENCES = [
     status: "Activo",
     statusColor: "#A8EB12",
     accent: "#7C3AED",
-    icon: "⚛️",
+    icon: <FaReact/>,
     desc: "Desarrollo de interfaces web con React JS, dashboards con Power BI y automatización de flujos con n8n para clientes de Perú y Latinoamérica.",
     achievements: [
       "Portfolio con orbe 3D y animaciones avanzadas",
@@ -29,7 +33,7 @@ const EXPERIENCES = [
     status: "Finalizado",
     statusColor: "#ffc75f",
     accent: "#F2C811",
-    icon: "📊",
+    icon: <FaChartColumn/>,
     desc: "Creación y mantenimiento de reportes en Power BI para el área de operaciones. Análisis de KPIs y presentación de resultados a gerencia.",
     achievements: [
       "Reducción del 40% en tiempo de reportes",
@@ -46,7 +50,7 @@ const EXPERIENCES = [
     status: "Finalizado",
     statusColor: "#66668a",
     accent: "#4ffbdf",
-    icon: "💻",
+    icon: <RiComputerFill/>,
     desc: "Desarrollo y mantenimiento de sitios web para clientes de la agencia. Implementación de diseños responsivos y optimización de rendimiento.",
     achievements: [
       "Desarrollo de 5+ landing pages",
@@ -141,7 +145,7 @@ export default function ExperienciasModal({ onClose, dark, T }) {
                 {/* Título y empresa */}
                 <h3 className={styles.role} style={{ color: dark ? "#e8e8f0" : "#0a0a0a" }}>{exp.role}</h3>
                 <p className={styles.company} style={{ color: exp.accent }}>
-                  🏢 {exp.company}
+                  <MdOutlineHomeWork /> {exp.company}
                   <span style={{ color: T.textFaint }}> · {exp.period}</span>
                 </p>
 

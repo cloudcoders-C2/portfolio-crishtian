@@ -41,7 +41,7 @@ const PostgreSQLIcon = () => (
 const RING1_LOGOS = [
   { name: "React JS",    color: "#61DAFB", angle: 0   },
   { name: "Power BI",    color: "#F2C811", angle: 120 },
-  { name: "Claude AI",   color: "#A855F7", angle: 240 },
+  { name: "Claude AI",   color: "#ff8c00", angle: 240 },
 ];
 const RING2_LOGOS = [
   { name: "n8n",          color: "#EA4B71", angle: 60  },
@@ -203,7 +203,7 @@ export default function Hero({ dark, T }) {
 
         {/* Columna texto */}
         <motion.div className={`hero-anim ${styles.textCol}`} variants={itemVariants}>
-          <motion.span className="stag" variants={itemVariants}>👋 Disponible para proyectos</motion.span>
+          <motion.span className="stag" variants={itemVariants}> Disponible para proyectos</motion.span>
 
           <motion.h1 className="htitle" variants={itemVariants}>
             Hola, soy <span className="glow-text">Crishtian</span>

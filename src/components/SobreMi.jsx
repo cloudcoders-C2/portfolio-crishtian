@@ -5,6 +5,8 @@ import EstudiosModal from "./EstudiosModal";
 import ExperienciasModal from "./ExperienciasModal";
 import styles from "./SobreMi.module.css";
 import fotoProfile from "../assets/foto.png";
+import { FaGraduationCap } from "react-icons/fa";
+import { FaBriefcase } from "react-icons/fa";
 
 export default function SobreMi({ dark, T }) {
   const [showEstudios,     setShowEstudios]     = useState(false);
@@ -100,10 +102,10 @@ export default function SobreMi({ dark, T }) {
             <Reveal delay={300}>
               <div className={styles.btns}>
                 <button className="btn-p" onClick={() => setShowEstudios(true)}>
-                  Ver estudios 🎓
+                  Ver estudios <span className={styles.icon}>{<FaGraduationCap />}</span>
                 </button>
                 <button className="btn-o" onClick={() => setShowExperiencias(true)}>
-                  Experiencias 💼
+                  Experiencias <span className={styles.icon}>{<FaBriefcase />}</span>
                 </button>
               </div>
             </Reveal>

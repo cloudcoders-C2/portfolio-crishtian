@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 import styles from "./EstudiosModal.module.css";
+import { FaChartLine, FaRobot, FaGraduationCap,FaUniversity,FaMobileAlt} from "react-icons/fa";
+import { IoIosDocument } from "react-icons/io";
+import { FaChartColumn } from "react-icons/fa6";
+import { GoClockFill } from "react-icons/go";
 
 // ── Datos ─────────────────────────────────────────────────────
 const EDUCATION = [
@@ -11,7 +15,7 @@ const EDUCATION = [
     period: "2018 – 2024",
     status: "Bachiller",
     statusColor: "#ffc75f",
-    icon: "🎓",
+    icon: <FaGraduationCap/>,
     accent: "#7C3AED",
     desc: "Formación integral en desarrollo de software, bases de datos, redes, sistemas de información y gestión tecnológica. Bachiller en Ingeniería de Sistemas.",
     tags: ["Sistemas", "Informática", "Software", "Bases de Datos", "Redes"],
@@ -24,7 +28,7 @@ const EDUCATION = [
     period: "2026 – 2027",
     status: "Próx. Titulado",
     statusColor: "#4ffbdf",
-    icon: "🏛️",
+    icon: <FaUniversity/>,
     accent: "#4ffbdf",
     desc: "Proceso de titulación en curso en una de las universidades más reconocidas del Perú. Enfocado en consolidar competencias en ingeniería de software y sistemas.",
     tags: ["Titulación", "Ingeniería", "Software", "Perú"],
@@ -39,7 +43,7 @@ const CERTIFICATIONS = [
     date: "Mar 2026",
     hours: "8 horas",
     accent: "#F2C811",
-    icon: "📊",
+    icon: <FaChartColumn/>,
     type: "Certificado de Participación",
     link: "https://drive.google.com/file/d/1fbQCYqltSr-heejN4IicnDr6kw5wf28Q/view?usp=drive_link",
   },
@@ -50,7 +54,7 @@ const CERTIFICATIONS = [
     date: "Mar 2026",
     hours: "8 horas",
     accent: "#ffc75f",
-    icon: "📈",
+    icon: <FaChartLine/>,
     type: "Certificado de Reconocimiento",
     link: "https://drive.google.com/file/d/1PSkgORBbxfHOto58PDR3xu3vgkdQabGc/view?usp=sharing",
   },
@@ -61,7 +65,7 @@ const CERTIFICATIONS = [
     date: "Feb 2026",
     hours: "8 horas",
     accent: "#A855F7",
-    icon: "🤖",
+    icon: <FaRobot/>,
     type: "Certificado de Participación",
     link: "https://drive.google.com/file/d/1kcePmb59TOy86o0_q_1-bNoULI44laLR/view?usp=sharing",
   },
@@ -72,7 +76,7 @@ const CERTIFICATIONS = [
     date: "Mar 2026",
     hours: "68.5 horas",
     accent: "#A435F0",
-    icon: "📱",
+    icon: <FaMobileAlt/>,
     type: "Certificado de Finalización",
     link: "https://ude.my/UC-16426fbd-d797-461d-a455-76da3e2a1d8c",
   },
@@ -129,8 +133,8 @@ export default function EstudiosModal({ onClose, dark, T }) {
         <div className={styles.tabsWrap}>
           <div className={styles.tabs} style={{ background: dark ? "#0a0a18" : "#ede5ff" }}>
             {[
-              { id: "edu",   label: "🎓 Educación" },
-              { id: "certs", label: `📜 Certs (${CERTIFICATIONS.length})` },
+              { id: "edu",icon: <FaGraduationCap/>,   label:" Educación" },
+              { id: "certs",icon: <IoIosDocument/>, label: `Certs (${CERTIFICATIONS.length})` },
             ].map((tab) => (
               <button
                 key={tab.id}
@@ -142,7 +146,7 @@ export default function EstudiosModal({ onClose, dark, T }) {
                   boxShadow: activeTab === tab.id ? "0 4px 16px #7C3AED44" : "none",
                 }}
               >
-                {tab.label}
+                {tab.icon} {tab.label} 
               </button>
             ))}
           </div>
@@ -175,7 +179,7 @@ export default function EstudiosModal({ onClose, dark, T }) {
                         </p>
                         {edu.thesis && (
                           <p className={styles.eduThesis} style={{ color: T.textFaint }}>
-                            📄 {edu.thesis}
+                            <IoIosDocument/> {edu.thesis}
                           </p>
                         )}
                       </div>
@@ -234,7 +238,7 @@ export default function EstudiosModal({ onClose, dark, T }) {
                 <div className={styles.certFooter}>
                   <span className={styles.certBadge}
                     style={{ background: `${cert.accent}18`, color: cert.accent, border: `1px solid ${cert.accent}44` }}>
-                    🕐 {cert.hours}
+                    <GoClockFill/> {cert.hours}
                   </span>
                   <span className={styles.certDate} style={{ color: T.textFaint }}>{cert.date}</span>
                 </div>

@@ -1,4 +1,7 @@
 // ─── Navegación ───────────────────────────────────────────────
+import { FaReact } from "react-icons/fa";
+import { FaChartColumn, FaBolt } from "react-icons/fa6";
+
 export const NAV_LINKS = [
   "Inicio",
   "Sobre mí",
@@ -13,21 +16,21 @@ export const NAV_LINKS = [
 // ─── Servicios ────────────────────────────────────────────────
 export const SERVICES = [
   {
-    icon: "⚛️",
+    icon: <FaReact />,
     title: "Desarrollo Frontend",
     desc: "Interfaces modernas y reactivas con React JS. Componentes reutilizables, rendimiento optimizado y UX excepcional.",
     tags: ["React", "Tailwind", "JavaScript"],
     accent: "#A8EB12",
   },
   {
-    icon: "📊",
+    icon: <FaChartColumn />,
     title: "Análisis de Datos",
     desc: "Dashboards interactivos con Power BI e inteligencia aumentada con Claude AI. Convierte datos en decisiones.",
     tags: ["Power BI", "Claude AI", "DAX"],
     accent: "#ffc75f",
   },
   {
-    icon: "⚡",
+    icon: <FaBolt />,
     title: "Automatización",
     desc: "Flujos de trabajo inteligentes con n8n. Conecta apps, elimina tareas repetitivas y potencia tu productividad.",
     tags: ["n8n", "API REST", "Webhooks"],
@@ -94,17 +97,14 @@ export const STACK_ITEMS = [
   },
   {
     name: "Claude AI",
-    color: "#A855F7",
+    color: "#ff8800ff",
     level: "Intermedio",
     desc: "Agentes IA, automatización inteligente, prompting",
     icon: () => (
-      <svg viewBox="0 0 40 40" width="36" height="36">
-        <circle cx="20" cy="20" r="18" fill="none" stroke="#A855F7" strokeWidth="2" />
-        <path d="M12 26 Q20 10 28 26" fill="none" stroke="#A855F7" strokeWidth="2.5" strokeLinecap="round" />
-        <circle cx="20" cy="22" r="2.5" fill="#A855F7" />
-        <circle cx="13" cy="17" r="1.5" fill="#A78BFA" opacity=".7" />
-        <circle cx="27" cy="17" r="1.5" fill="#A78BFA" opacity=".7" />
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="#ff8800ff" width={32} height={32}>
+        <path d="M100.4 340.5l100.7-56.5 1.7-4.9-1.7-2.7-4.9 0-16.8-1-57.5-1.6-49.9-2.1-48.3-2.6-12.2-2.6-11.4-15 1.2-7.5 10.2-6.9 14.7 1.3c18.9 1.3 45.9 3.1 81 5.6l35.2 2.1 52.2 5.4 8.3 0 1.2-3.4-2.8-2.1-2.2-2.1-50.3-34.1-54.4-36-28.5-20.7-15.4-10.5-7.8-9.8-3.4-21.5 14-15.4 18.8 1.3 4.8 1.3 19 14.7 40.7 31.5 53.1 39.1 7.8 6.5 3.1-2.2 .4-1.6-3.5-5.8-28.9-52.2-30.8-53.1-13.7-22-3.6-13.2c-1.3-5.4-2.2-10-2.2-15.5l15.9-21.6 8.8-2.8 21.2 2.8 8.9 7.8 13.2 30.2 21.4 47.5 33.2 64.6 9.7 19.2 5.2 17.8 1.9 5.4 3.4 0 0-3.1 2.7-36.4 5-44.7 4.9-57.5 1.7-16.2 8-19.4 15.9-10.5 12.4 5.9 10.2 14.7-1.4 9.5-6.1 39.5-11.9 61.9-7.8 41.5 4.5 0 5.2-5.2 21-27.8 35.2-44.1 15.5-17.5 18.1-19.3 11.6-9.2 22 0 16.2 24.1-7.3 24.9-22.7 28.7-18.8 24.4-27 36.3-16.8 29 1.6 2.3 4-.4 60.9-13 32.9-5.9 39.3-6.7 17.8 8.3 1.9 8.4-7 17.2-42 10.4-49.2 9.8-73.3 17.3-.9 .7 1 1.3 33 3.1 14.1 .8 34.6 0 64.4 4.8 16.8 11.1 10.1 13.6-1.7 10.4-25.9 13.2c-15.5-3.7-54.4-12.9-116.6-27.7l-28-7-3.9 0 0 2.3 23.3 22.8 42.7 38.6 53.5 49.8 2.7 12.3-6.9 9.7-7.3-1-47-35.4-18.1-15.9-41.1-34.6-2.7 0 0 3.6 9.5 13.9 50 75.2 2.6 23-3.6 7.5-13 4.5-14.2-2.6-29.3-41.1-30.2-46.3-24.4-41.5-3 1.7-14.4 154.8-6.7 7.9-15.5 5.9-13-9.8-6.9-15.9 6.9-31.5 8.3-41.1 6.7-32.7 6.1-40.6 3.6-13.5-.2-.9-3 .4-30.6 42-46.5 62.9-36.8 39.4-8.8 3.5-15.3-7.9 1.4-14.1 8.5-12.6 50.9-64.8 30.7-40.2 19.8-23.2-.1-3.4-1.2 0-135.3 87.8-24.1 3.1-10.4-9.7 1.3-15.9 4.9-5.2 40.7-28-.1 .1 0 .1z"/>
       </svg>
+
     ),
   },
   {
@@ -270,7 +270,7 @@ export const AUTO_PLANS = [
 // ─── Tarjetas de precios ───────────────────────────────────────
 export const PRICING_CARDS = [
   {
-    icon: "⚛️",
+    icon: <FaReact />,
     title: "Desarrollo Frontend",
     price: 500,
     accent: "#A8EB12",
@@ -285,7 +285,7 @@ export const PRICING_CARDS = [
     badge: null,
   },
   {
-    icon: "📊",
+    icon: <FaChartColumn />,
     title: "Análisis de Datos",
     price: 300,
     accent: "#ffc75f",
@@ -357,7 +357,7 @@ export const SOCIAL_LINKS = [
   },
 ];
 
-// ─── Corner logos para "Sobre mí" ─────────────────────────────
+// ─── Corner logos para "Sobre mí" en la foto ─────────────────────────────
 export const CORNER_LOGOS = [
   {
     pos: "topLeft",
@@ -401,14 +401,10 @@ export const CORNER_LOGOS = [
   {
     pos: "bottomRight",
     name: "Claude AI",
-    color: "#A855F7",
+    color: "#ff8800",
     icon: (s) => (
-      <svg viewBox="0 0 40 40" width={s} height={s}>
-        <circle cx="20" cy="20" r="18" fill="none" stroke="#A855F7" strokeWidth="2" />
-        <path d="M12 26 Q20 10 28 26" fill="none" stroke="#A855F7" strokeWidth="2.5" strokeLinecap="round" />
-        <circle cx="20" cy="22" r="2.5" fill="#A855F7" />
-        <circle cx="13" cy="17" r="1.5" fill="#A78BFA" opacity=".8" />
-        <circle cx="27" cy="17" r="1.5" fill="#A78BFA" opacity=".8" />
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="#ff8800" width={32} height={32}>
+        <path d="M100.4 340.5l100.7-56.5 1.7-4.9-1.7-2.7-4.9 0-16.8-1-57.5-1.6-49.9-2.1-48.3-2.6-12.2-2.6-11.4-15 1.2-7.5 10.2-6.9 14.7 1.3c18.9 1.3 45.9 3.1 81 5.6l35.2 2.1 52.2 5.4 8.3 0 1.2-3.4-2.8-2.1-2.2-2.1-50.3-34.1-54.4-36-28.5-20.7-15.4-10.5-7.8-9.8-3.4-21.5 14-15.4 18.8 1.3 4.8 1.3 19 14.7 40.7 31.5 53.1 39.1 7.8 6.5 3.1-2.2 .4-1.6-3.5-5.8-28.9-52.2-30.8-53.1-13.7-22-3.6-13.2c-1.3-5.4-2.2-10-2.2-15.5l15.9-21.6 8.8-2.8 21.2 2.8 8.9 7.8 13.2 30.2 21.4 47.5 33.2 64.6 9.7 19.2 5.2 17.8 1.9 5.4 3.4 0 0-3.1 2.7-36.4 5-44.7 4.9-57.5 1.7-16.2 8-19.4 15.9-10.5 12.4 5.9 10.2 14.7-1.4 9.5-6.1 39.5-11.9 61.9-7.8 41.5 4.5 0 5.2-5.2 21-27.8 35.2-44.1 15.5-17.5 18.1-19.3 11.6-9.2 22 0 16.2 24.1-7.3 24.9-22.7 28.7-18.8 24.4-27 36.3-16.8 29 1.6 2.3 4-.4 60.9-13 32.9-5.9 39.3-6.7 17.8 8.3 1.9 8.4-7 17.2-42 10.4-49.2 9.8-73.3 17.3-.9 .7 1 1.3 33 3.1 14.1 .8 34.6 0 64.4 4.8 16.8 11.1 10.1 13.6-1.7 10.4-25.9 13.2c-15.5-3.7-54.4-12.9-116.6-27.7l-28-7-3.9 0 0 2.3 23.3 22.8 42.7 38.6 53.5 49.8 2.7 12.3-6.9 9.7-7.3-1-47-35.4-18.1-15.9-41.1-34.6-2.7 0 0 3.6 9.5 13.9 50 75.2 2.6 23-3.6 7.5-13 4.5-14.2-2.6-29.3-41.1-30.2-46.3-24.4-41.5-3 1.7-14.4 154.8-6.7 7.9-15.5 5.9-13-9.8-6.9-15.9 6.9-31.5 8.3-41.1 6.7-32.7 6.1-40.6 3.6-13.5-.2-.9-3 .4-30.6 42-46.5 62.9-36.8 39.4-8.8 3.5-15.3-7.9 1.4-14.1 8.5-12.6 50.9-64.8 30.7-40.2 19.8-23.2-.1-3.4-1.2 0-135.3 87.8-24.1 3.1-10.4-9.7 1.3-15.9 4.9-5.2 40.7-28-.1 .1 0 .1z"/>
       </svg>
     ),
   },

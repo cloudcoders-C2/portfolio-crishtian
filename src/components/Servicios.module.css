@@ -38,9 +38,11 @@
   margin-top: 8px;
   filter: drop-shadow(0 0 12px currentColor);
   transition: transform .3s ease;
+  color: var(--clr-accent);
 }
 .card:hover .icon {
   transform: scale(1.15) rotate(-5deg);
+  color: var(--clr-pink);  
 }
 
 .title { font-size: clamp(16px, 2.5vw, 19px); font-weight: 700; margin-bottom: 10px; }

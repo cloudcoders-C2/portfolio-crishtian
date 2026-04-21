@@ -174,7 +174,10 @@
   flex-shrink: 0;
 }
 
-.eduIcon { font-size: 24px; }
+.eduIcon { 
+  font-size: 24px; 
+  color: #7C3AED;
+}
 
 .eduBody { flex: 1; min-width: 0; }
 
@@ -308,6 +311,7 @@
   justify-content: center;
   font-size: 18px;
   flex-shrink: 0;
+  color: var(--clr-accent);
 }
 
 .certType {
