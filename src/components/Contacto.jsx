@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import emailjs from "@emailjs/browser";
+import DOMPurify from "dompurify";
 import { SOCIAL_LINKS } from "../constants";
 import Reveal from "./Reveal";
 import styles from "./Contacto.module.css";
@@ -44,15 +45,12 @@ function getRemainingMinutes() {
   }
 }
 
-// ── Seguridad: Sanitización ───────────────────────────────────
+// ── Seguridad: Sanitización (DOMPurify) ───────────────────────
 function sanitize(value) {
-  return value
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/javascript:/gi, "")
-    .replace(/on\w+\s*=/gi, "")
-    .replace(/script/gi, "")
-    .trim();
+  return DOMPurify.sanitize(String(value).trim(), {
+    ALLOWED_TAGS:  [],
+    ALLOWED_ATTR:  [],
+  });
 }
 
 // ─────────────────────────────────────────────────────────────
